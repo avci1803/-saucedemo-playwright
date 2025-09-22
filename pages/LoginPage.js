@@ -1,5 +1,8 @@
-class LoginPage {
+import BasePage from "./BasePage.js";
+
+export default class LoginPage extends BasePage {
   constructor(page) {
+    super(page); // BasePage'in constructor'ını çağırır
     this.page = page;
     this.userNameInput = page.locator("#user-name");
     this.passwordInput = page.locator("#password");
@@ -7,7 +10,7 @@ class LoginPage {
     this.errorMessage = page.locator('[data-test="error"]');
   }
 
-  async goto() {
+  async goTo() {
     await this.page.goto("https://www.saucedemo.com/");
   }
 
@@ -21,5 +24,3 @@ class LoginPage {
     return await this.errorMessage.textContent();
   }
 }
-
-module.exports = { LoginPage };
