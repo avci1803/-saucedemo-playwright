@@ -1,17 +1,11 @@
-# Node modules
-node_modules/
+# Node.js bağımlılıkları
+/node_modules
 
-# Playwright test reports
-playwright-report/
-test-results/
+# Playwright çıktıları
+/playwright-report
+/test-results
+/test-videos
+/test-screenshots
 
-# Environment files
+# Ortam değişkenleri
 .env
-.env.*
-
-# VS Code settings
-.vscode/
-
-# OS generated files
-.DS_Store
-Thumbs.db

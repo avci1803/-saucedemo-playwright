@@ -1,23 +1,23 @@
-import BasePage from "./BasePage.js";
+import BasePage from "./BasePage";
 
 export default class LoginPage extends BasePage {
   constructor(page) {
     super(page); // BasePage'in constructor'ını çağırır
     this.page = page;
-    this.userNameInput = page.locator("#user-name");
-    this.passwordInput = page.locator("#password");
-    this.loginButton = page.locator("#login-button");
-    this.errorMessage = page.locator('[data-test="error"]');
+    this.userNameInput = this.page.locator("#user-name");
+    this.passwordInput = this.page.locator("#password");
+    this.loginButton = this.page.locator("#login-button");
+    this.errorMessage = this.page.locator('[data-test="error"]');
   }
 
-  async goTo() {
-    await this.page.goto("https://www.saucedemo.com/");
+  async goToLoginPage() {
+    await this.navigate("https://www.saucedemo.com/");
   }
 
   async login(userName, password) {
-    await this.userNameInput.fill(userName);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
+    await this.fill(this.userNameInput, userName);
+    await this.fill(this.passwordInput, password);
+    await this.click(this.loginButton);
   }
 
   async getErrorMessage() {

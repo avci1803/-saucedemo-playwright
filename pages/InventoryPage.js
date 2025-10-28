@@ -1,20 +1,23 @@
-export class InventoryPage {
+import BasePage from "./BasePage.js";
+
+export default class InventoryPage extends BasePage {
   constructor(page) {
+    super(page); // BasePage'in constructor'ını çağırır
     this.page = page;
-    this.addToCart_Bike = page.locator(
+    this.addToCart_Bike = this.page.locator(
       "button[id='add-to-cart-sauce-labs-bike-light']"
     );
-    this.addToCart_Backpack = page.locator(
+    this.addToCart_Backpack = this.page.locator(
       "button#add-to-cart-sauce-labs-backpack"
     );
-    this.cartIcon = page.locator("a[data-test='shopping-cart-link']");
+    this.cartIcon = this.page.locator("a[data-test='shopping-cart-link']");
   }
   async addItemToCart() {
-    await this.addToCart_Bike.click();
-    await this.addToCart_Backpack.click();
+    await this.click(this.addToCart_Bike);
+    await this.click(this.addToCart_Backpack);
   }
 
   async goTochart() {
-    await this.cartIcon.click();
+    await this.click(this.cartIcon);
   }
 }
