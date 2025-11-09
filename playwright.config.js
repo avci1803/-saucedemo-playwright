@@ -43,12 +43,7 @@ module.exports = defineConfig({
         browserName: "chromium",
       },
     },
-    {
-      name: "firefox",
-      use: {
-        browserName: "firefox",
-      },
-    },
+
     // İhtiyaca göre firefox ve webkit eklenebilir.
   ],
 

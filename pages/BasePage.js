@@ -27,7 +27,7 @@ export default class BasePage {
   }
     */
   async verifyTextOnPage(text) {
-    const locator = this.page.getByText(text);
+    const locator = this.page.getByText(text, { exact: "false" });
     expect(locator).toBeVisible();
   }
 }

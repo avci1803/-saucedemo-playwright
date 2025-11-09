@@ -20,6 +20,7 @@ export default class CheckoutPage extends BasePage {
     this.orderCompleteHeader = this.page.getByRole("heading", {
       name: "Thank you for your order!",
     });
+    this.cancelBtn = this.page.getByRole("button", { name: "Cancel" });
   }
 
   async clickCheckoutBtn() {
@@ -42,5 +43,9 @@ export default class CheckoutPage extends BasePage {
 
   async verifyOrderComplete() {
     await expect(this.orderCompleteHeader).toBeVisible();
+  }
+
+  async clickCancelBtn() {
+    await this.click(this.cancelBtn);
   }
 }
