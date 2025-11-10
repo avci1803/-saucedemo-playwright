@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import LoginPage from "../pages/LoginPage.js";
+import LoginPage from "../Pages/LoginPage.js";
 import InventoryPage from "../pages/InventoryPage.js";
 
 test("should add item to cart and navigate to cart page", async ({ page }) => {
