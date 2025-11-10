@@ -1,8 +1,8 @@
 // playwright.config.js
 
-const { defineConfig } = require("@playwright/test");
+import { defineConfig } from "@playwright/test";
 
-module.exports = defineConfig({
+export default defineConfig({
   // Tüm testlerin çalışacağı dizin
   testDir: "./tests", //
 
