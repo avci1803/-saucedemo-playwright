@@ -1,5 +1,5 @@
-import BasePage from "./BasePage";
-import { expect } from "playwright/test";
+import BasePage from "./BasePage.js";
+import { expect } from "@playwright/test";
 
 export default class CheckoutPage extends BasePage {
   constructor(page) {
