@@ -48,5 +48,11 @@ export default defineConfig({
   ],
 
   // Raporlama ayarları
-  reporter: [["list"], ["html", { outputFolder: "playwright-report" }]], //
+
+  reporter: [
+    ["list"],
+    ["html", { outputFolder: "playwright-report", open: "never" }],
+    ["junit", { outputFile: "results.xml" }],
+  ],
+  //
 });
