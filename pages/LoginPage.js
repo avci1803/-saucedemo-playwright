@@ -11,7 +11,7 @@ export default class LoginPage extends BasePage {
   }
 
   async goToLoginPage() {
-    await this.navigate("https://www.saucedemo.com/");
+    await this.navigate("https://www.saucedemo.co/");
   }
 
   async login(userName, password) {
