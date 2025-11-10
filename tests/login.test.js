@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import LoginPage from "../Pages/LoginPage.js";
-import testUsers from "../data/users.json";
+import testUsers from "./data/users.json" assert { type: "json" };
 
 test.describe("Login Test - Positive and Negative Scnerio", () => {
   test("Login with valid credentials", async ({ page }) => {
