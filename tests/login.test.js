@@ -3,7 +3,7 @@ import LoginPage from "../Pages/LoginPage.js";
 import testUsers from "./data/users.json" assert { type: "json" };
 
 test.describe("Login Test - Positive and Negative Scnerio", () => {
-  test("Login with valid credentials", async ({ page }) => {
+  test("Login valid credentials", async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goToLoginPage();
     const valid_user = testUsers.validUser;
@@ -11,7 +11,7 @@ test.describe("Login Test - Positive and Negative Scnerio", () => {
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
   });
 
-  test("login fails with invalid credentials", async ({ page }) => {
+  test("login fails invalid credentials", async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goToLoginPage();
     const lockedOutUser = testUsers.lockedOutUser;

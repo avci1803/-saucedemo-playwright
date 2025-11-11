@@ -1,84 +1,18 @@
-<testsuites id="" name="" tests="2" failures="2" skipped="0" errors="0" time="6.844833">
-<testsuite name="checkout.test.js" timestamp="2025-11-10T13:53:07.971Z" hostname="chromium" tests="2" failures="2" skipped="0" time="2.581" errors="0">
-<testcase name="Checkout both scnerio - Positive and Negative › Checkout successfully" classname="checkout.test.js" time="1.388">
-<failure message="checkout.test.js:7:3 Checkout successfully" type="FAILURE">
-<![CDATA[  [chromium] › checkout.test.js:7:3 › Checkout both scnerio - Positive and Negative › Checkout successfully 
-
-    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.saucedemo.co/
-    Call log:
-      - navigating to "https://www.saucedemo.co/", waiting until "load"
-
-
-       at ..\Pages\BasePage.js:8
-
-       6 |   }
-       7 |   async navigate(url) {
-    >  8 |     await this.page.goto(url);
-         |                     ^
-       9 |   }
-      10 |   // Locator objesi bekliyor
-      11 |   async click(locator) {
-
-        at LoginPage.navigate (C:\Users\mavci\source\src\saucedemo-playwright\Pages\BasePage.js:8:21)
-        at LoginPage.goToLoginPage (C:\Users\mavci\source\src\saucedemo-playwright\Pages\LoginPage.js:14:16)
-        at C:\Users\mavci\source\src\saucedemo-playwright\tests\checkout.test.js:12:21
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\checkout-Checkout-both-scn-89f4c-ative-Checkout-successfully-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\checkout-Checkout-both-scn-89f4c-ative-Checkout-successfully-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\checkout-Checkout-both-scn-89f4c-ative-Checkout-successfully-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\checkout-Checkout-both-scn-89f4c-ative-Checkout-successfully-chromium\video.webm]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="28.755332000000003">
+<testsuite name="add-to-cart.test.js" timestamp="2025-11-11T13:58:35.577Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.748" errors="0">
+<testcase name="should add item to cart and navigate to cart page" classname="add-to-cart.test.js" time="19.748">
 </testcase>
-<testcase name="Checkout both scnerio - Positive and Negative › Negative Scnerio: Click on Cancel button on the checkout page" classname="checkout.test.js" time="1.193">
-<failure message="checkout.test.js:28:3 Negative Scnerio: Click on Cancel button on the checkout page" type="FAILURE">
-<![CDATA[  [chromium] › checkout.test.js:28:3 › Checkout both scnerio - Positive and Negative › Negative Scnerio: Click on Cancel button on the checkout page 
-
-    Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.saucedemo.co/
-    Call log:
-      - navigating to "https://www.saucedemo.co/", waiting until "load"
-
-
-       at ..\Pages\BasePage.js:8
-
-       6 |   }
-       7 |   async navigate(url) {
-    >  8 |     await this.page.goto(url);
-         |                     ^
-       9 |   }
-      10 |   // Locator objesi bekliyor
-      11 |   async click(locator) {
-
-        at LoginPage.navigate (C:\Users\mavci\source\src\saucedemo-playwright\Pages\BasePage.js:8:21)
-        at LoginPage.goToLoginPage (C:\Users\mavci\source\src\saucedemo-playwright\Pages\LoginPage.js:14:16)
-        at C:\Users\mavci\source\src\saucedemo-playwright\tests\checkout.test.js:36:21
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\checkout-Checkout-both-scn-f7f2e-button-on-the-checkout-page-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\checkout-Checkout-both-scn-f7f2e-button-on-the-checkout-page-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\checkout-Checkout-both-scn-f7f2e-button-on-the-checkout-page-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\checkout-Checkout-both-scn-f7f2e-button-on-the-checkout-page-chromium\video.webm]]
-]]>
-</system-out>
+</testsuite>
+<testsuite name="checkout.test.js" timestamp="2025-11-11T13:58:35.577Z" hostname="chromium" tests="2" failures="0" skipped="0" time="22.493" errors="0">
+<testcase name="Checkout successfully" classname="checkout.test.js" time="20.063">
+</testcase>
+<testcase name="Negative Scnerio: Click on Cancel button on the checkout page" classname="checkout.test.js" time="2.43">
+</testcase>
+</testsuite>
+<testsuite name="login.test.js" timestamp="2025-11-11T13:58:35.577Z" hostname="chromium" tests="2" failures="0" skipped="0" time="21.209" errors="0">
+<testcase name="Login Test - Positive and Negative Scnerio › Login valid credentials" classname="login.test.js" time="19.488">
+</testcase>
+<testcase name="Login Test - Positive and Negative Scnerio › login fails invalid credentials" classname="login.test.js" time="1.721">
 </testcase>
 </testsuite>
 </testsuites>

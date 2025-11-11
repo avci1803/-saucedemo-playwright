@@ -1,5 +1,4 @@
 import BasePage from "./BasePage.js";
-
 export default class LoginPage extends BasePage {
   constructor(page) {
     super(page); // BasePage'in constructor'ını çağırır
@@ -11,7 +10,7 @@ export default class LoginPage extends BasePage {
   }
 
   async goToLoginPage() {
-    await this.navigate("https://www.saucedemo.co/");
+    await this.navigate("https://www.saucedemo.com/");
   }
 
   async login(userName, password) {
